@@ -6,5 +6,5 @@ services:
     ports:
       - "3030:3000"
     volumes:
-      - ./web:/src/web
-      - /src/web/node_modules
+      - ./web:/src/
+      - /src/node_modules

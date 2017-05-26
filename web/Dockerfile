@@ -1,15 +1,11 @@
-FROM alpine:3.1
+FROM node:7.10
 
-ADD . /src/web
+ADD . /src
 
-WORKDIR /src/web
-
-RUN apk add --update nodejs
+WORKDIR /src
 
 RUN npm install
 
 EXPOSE 3000
-
-RUN ls -trl
 
 CMD ["node", "server.js"]
