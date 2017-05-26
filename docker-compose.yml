@@ -1,0 +1,10 @@
+version: '2'
+services:
+  web:
+    build: ./web
+    image: node-service
+    ports:
+      - "3030:3000"
+    volumes:
+      - ./web:/src/web
+      - /src/web/node_modules
